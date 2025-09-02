@@ -9,14 +9,17 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "首页", link: "/" },
-      { text: "指南", link: "/guide" },
+      { text: "指南", link: "/guide/" },
     ],
 
     sidebar: {
-      "/guide": [
+      "/guide/": [
         {
           text: "指南",
-          items: [{ text: "服务端渲染 (SSR)", link: "/guide" }],
+          items: [
+            { text: "服务端渲染 (SSR)", link: "/guide/" },
+            { text: "数据获取", link: "/guide/data-fetching" },
+          ],
         },
       ],
     },

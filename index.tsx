@@ -1,5 +1,5 @@
 import { renderToString } from "react-dom/server";
-import App from "./src/App";
+import App, { getServerSideProps } from "./src/App";
 
 Bun.serve({
   port: 3000,
@@ -23,7 +23,9 @@ Bun.serve({
 
     // 如果是请求页面
     if (url.pathname === "/") {
-      const appHtml = renderToString(<App />);
+      const pageProps = await getServerSideProps();
+
+      const appHtml = renderToString(<App {...pageProps.props} />);
 
       const html = `
     <!DOCTYPE html>
@@ -34,6 +36,9 @@ Bun.serve({
         </head>
         <body>
           <div id="app">${appHtml}</div>
+          <script id="__SSR_PROPS__" type="application/json">${JSON.stringify(
+            pageProps.props
+          )}</script>
           <script src="/client.js" defer></script>
         </body>
       </html>
