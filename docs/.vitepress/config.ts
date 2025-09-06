@@ -20,6 +20,7 @@ export default defineConfig({
             { text: "服务端渲染 (SSR)", link: "/guide/" },
             { text: "数据获取", link: "/guide/data-fetching" },
             { text: "路由", link: "/guide/routing" },
+            { text: "虚拟DOM", link: "/guide/vdom" },
           ],
         },
       ],
