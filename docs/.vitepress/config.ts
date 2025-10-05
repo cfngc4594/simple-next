@@ -21,6 +21,7 @@ export default defineConfig({
             { text: "数据获取", link: "/guide/data-fetching" },
             { text: "路由", link: "/guide/routing" },
             { text: "虚拟DOM", link: "/guide/vdom" },
+            { text: "Babel", link: "/guide/babel" },
           ],
         },
       ],
