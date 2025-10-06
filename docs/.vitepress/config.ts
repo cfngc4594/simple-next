@@ -22,6 +22,7 @@ export default defineConfig({
             { text: "路由", link: "/guide/routing" },
             { text: "虚拟DOM", link: "/guide/vdom" },
             { text: "Babel", link: "/guide/babel" },
+            { text: "Simple React", link: "/guide/simple-react" },
           ],
         },
       ],
